@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 // Rutas
 import { AppRoutingModule } from './app-routing.module';
-//Servicios
+// Servicios
 import { OrdenesService } from './services/ordenes.service';
 // Componentes
 import { AppComponent } from './app.component';
