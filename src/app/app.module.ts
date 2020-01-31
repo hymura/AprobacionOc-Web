@@ -3,10 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { OrdenesComponent } from './components/ordenes/ordenes.component';
+import { AprobacionOCComponent } from './components/aprobacion-oc/aprobacion-oc.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OrdenesComponent,
+    AprobacionOCComponent
   ],
   imports: [
     BrowserModule,
