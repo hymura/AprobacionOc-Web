@@ -1,25 +1,26 @@
 <h1>Ordenes de compra</h1>
-<table class="table" style="padding: top 15px">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Id oc</th>
-            <th scope="col">Numero de OC</th>
-            <th scope="col">Fecha creacion</th>
-            <th scope="col">Id Comprador</th>
-            <th scope="col">Fecha de Aprobacion</th>
-            <th scope="col">Total OC</th>
-            <th scope="col">Estado</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>31-ENE-2020</td>
-            <td>3000</td>
-            <td>Requiere Aprobacion</td>
-        </tr>
-    </tbody>
-</table>
+<div class="clear">
+    <table class="table" style="padding: 15x">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id oc</th>
+                <th scope="col">Numero de OC</th>
+                <th scope="col">Fecha creacion</th>
+                <th scope="col">Id Comprador</th>
+                <th scope="col">Fecha de Aprobacion</th>
+                <th scope="col">Total OC</th>
+                <th scope="col">Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of purchaseOrder; let i=index">
+                <td>{{order.poHeaderId}}</td>
+                <td>{{order.orderNumber}}</td>
+                <td>{{order.creationDate}}</td>
+                <td>{{order.buyerId}}</td>
+                <td>{{order.approvedDate}}</td>
+                <td>{{order.totalAmount}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

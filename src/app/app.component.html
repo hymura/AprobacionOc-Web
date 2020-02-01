@@ -1,5 +1,5 @@
 <app-ordenes></app-ordenes>
+<router-outlet></router-outlet>
 <div class="clear"></div>
 <button type="button" [routerLink]="['/ordenes']" routerLinkActive="router-link-active" class="btn btn-primary">Ordenes</button>
-<button type="button" class="btn btn-success">Registrar Orden</button>
-<router-outlet></router-outlet>
+<button type="button" [routerLink]="['/crear-orden']" class="btn btn-success">Registrar Orden</button>

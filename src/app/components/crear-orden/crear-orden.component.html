@@ -1,0 +1,44 @@
+<div class="clear">
+    <h1>Crear orden de compra</h1>
+    <form class="form-horizontal main-form">
+        <div *ngIf="!isValid" class="alert alert-danger">
+            <strong>Danger!</strong> {{message}}.
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="orderNumber"><span class="required">*</span>Nro. OC:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="orderNumber" id="orderNumber" [(ngModel)]="purchaseOrder.orderNumber" placeholder="Nro Orden">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="creationDate"><span class="required">*</span>Fecha Creacion:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="creationDate" id="creationDate" [(ngModel)]="purchaseOrder.creationDate" placeholder="Fecha Creacion">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="buyerId"><span class="required">*</span>Id Comprador:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="buyerId" id="buyerId" [(ngModel)]="purchaseOrder.buyerId" placeholder="Id Comprador">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="approvedDate">Fecha aprobacion:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="approvedDate" id="approvedDate" [(ngModel)]="purchaseOrder.approvedDate" placeholder="Fecha aprobacion">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="totalAmount"><span class="required">*</span>Monto Total:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="totalAmount" id="totalAmount" [(ngModel)]="purchaseOrder.totalAmount" placeholder="Monto Total">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" (click)="saveOrUpdate()" class="btn btn-default btn-save">Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>
