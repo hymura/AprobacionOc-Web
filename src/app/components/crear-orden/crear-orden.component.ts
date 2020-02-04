@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
 export class CrearOrdenComponent implements OnInit {
 
   private purchaseOrder: PurchaseOrderEntity;
-  private isValid: boolean = true ;
+  private isValid = true ;
   private message: string ;
 
 
@@ -32,19 +32,19 @@ export class CrearOrdenComponent implements OnInit {
     this.isValid = this.crearOrdenService.validate(this.purchaseOrder);
     if (this.isValid){
        this.crearOrdenService.saveOrUpdate(this.purchaseOrder).subscribe(res => {
-         console.log('res.responseCode' + res);
-/*
-         if(res.code == CREATED){
+         console.log('res.responseCode' + res.code);
+
+         if(res.code === CREATED){
           this.router.navigate(['/ordenes']);
 
-         }else{
+         } else {
            this.message = 'code' + res.code;
            this.isValid = false;
          }
-*/
+
        });
     } else {
-      this.message ="los campos con * son obligatorios";
+      this.message = 'los campos con * son obligatorios';
     }
 
 }

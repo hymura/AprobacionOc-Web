@@ -1,4 +1,4 @@
-export class RestResponse {
+export class ResponseEntity {
     public code: number;
     public message: string;
 }
